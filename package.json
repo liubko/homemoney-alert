@@ -1,0 +1,24 @@
+{
+  "name": "homemoney-alert",
+  "version": "1.0.0",
+  "description": "Use homemoney.ua public API to remind about expenses for current month by twitter DM",
+  "main": "main.js",
+  "scripts": {
+    "start": "node ./main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liubko/homemoney-alert.git"
+  },
+  "author": "Liubko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liubko/homemoney-alert/issues"
+  },
+  "homepage": "https://github.com/liubko/homemoney-alert#readme",
+  "dependencies": {
+    "axios": "0.15.3",
+    "twitter": "1.7.0"
+  }
+}

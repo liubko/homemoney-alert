@@ -1,0 +1,13 @@
+{
+  "clientId": "",
+  "clientSecret": "",
+  "password": "",
+  "login": "",
+  "twitter": {
+    "consumer_key": "",
+    "consumer_secret": "",
+    "access_token_key": "",
+    "access_token_secret": "",
+    "users": ["list", "of", "users", "to", "notify"],
+  }
+}
