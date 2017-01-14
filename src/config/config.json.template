@@ -1,13 +1,16 @@
 {
+  // more details here https://homemoney.ua/api/api2.asmx
   "clientId": "",
   "clientSecret": "",
   "password": "",
   "login": "",
+
+  // more details here https://dev.twitter.com/oauth/overview/application-owner-access-tokens
   "twitter": {
     "consumer_key": "",
     "consumer_secret": "",
     "access_token_key": "",
     "access_token_secret": "",
-    "users": ["list", "of", "users", "to", "notify"],
+    "users": ["fry", "bender"], // list of users to notify
   }
 }
