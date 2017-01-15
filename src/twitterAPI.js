@@ -1,5 +1,6 @@
 const Twitter = require('twitter');
 const config = require('./config/config.json');
+const logger = require('./logger.js');
 
 const client = new Twitter({
   consumer_key: config.twitter.consumer_key,
@@ -16,12 +17,11 @@ module.exports = {
         'text': text,
       }, (error, tweets, response) => {
         if (error) {
-          console.log('error', error);
+          logger.error(`Can't send Twitter DM. ${JSON.stringify(error)}`);
           return;
         }
-        console.log('tweets', tweets);
+        logger.info(`Message to ${userId} has been sent!`);
       });
     });
   }
 };
-

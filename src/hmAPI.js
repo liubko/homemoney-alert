@@ -1,23 +1,24 @@
 const axios = require('axios');
 const dateHelper = require('./helperDate.js');
+const logger = require('./logger.js');
 
 const api = axios.create({
   baseURL: 'https://homemoney.ua/api/api2.asmx/'
 });
 
 const handleError = ((msg, error) => {
-  console.log(`[${msg}]`);
+  logger.info(`[${msg}]`);
   if (error.response) {
     // The request was made, but the server responded with a status code
     // that falls out of the range of 2xx
-    console.log(error.response.data);
-    console.log(error.response.status);
-    console.log(error.response.headers);
+    logger.info(error.response.data);
+    logger.info(error.response.status);
+    logger.info(error.response.headers);
   } else {
     // Something happened in setting up the request that triggered an Error
-    console.log('Error', error.message);
+    logger.error(`Error ${JSON.stringify(error.message)}`);
   }
-  console.log(error.config);
+  logger.info(error.config);
 });
 
 const auth = config => {

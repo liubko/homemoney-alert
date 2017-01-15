@@ -1,4 +1,5 @@
 const hmAPI = require('./src/hmAPI.js');
+const logger = require('./src/logger.js');
 const auth = require('./src/auth.js');
 const twitterApi = require('./src/twitterAPI.js');
 const processData = require('./src/processData.js');
@@ -18,6 +19,6 @@ auth.getToken().then(token => {
   }).then(({totalExpenses, defaultCurrency}) => {
     twitterApi.sendMessage(`You spent ${totalExpenses}${defaultCurrency.shortname} this month`);
   }).catch(err => {
-    console.log('ERROR', err);
+    logger.error(`ERROR: ${JSON.stringify(err)}`);
   });
 });
