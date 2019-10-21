@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/liubko/homemoney-alert#readme",
   "dependencies": {
-    "axios": "0.15.3",
+    "axios": "0.19.0",
     "twitter": "1.7.0",
     "winston": "2.3.0"
   }
